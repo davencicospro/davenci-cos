@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0b1d2a, #102a43);
+  color: #fff;
+}
+
+.box {
+  max-width: 420px;
+  margin: 40px auto;
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 18px;
+  text-align: center;
+}
+
+.support-btn {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #2ec4b6, #3fa9f5);
+  color: #fff;
+  cursor: pointer;
+}
+
+.support-btn.new {
+  background: linear-gradient(135deg, #6a4cff, #8e7dff);
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>فتح تذكرة دعم</title>
+  <link rel="stylesheet" href="ticket-new.css">
+</head>
+<body>
+
+<div class="card">
+  <h3>🎫 فتح تذكرة دعم</h3>
+
+  <input
+    id="tiktokName"
+    placeholder="@اسم_تيكتوك"
+  >
+
+  <select id="issueType">
+    <option value="">-- اختر نوع المشكل --</option>
+    <option value="مشكل بث مباشر">🎥 مشكل بث مباشر</option>
+    <option value="حظر حساب">🚫 حظر حساب</option>
+    <option value="تحذير">⚠️ تحذير</option>
+    <option value="مشكل آخر">❓ مشكل آخر</option>
+  </select>
+
+  <textarea
+    id="ticketText"
+    rows="4"
+    placeholder="وصف المشكل..."
+  ></textarea>
+
+ 
+  <button id="sendBtn">إرسال التذكرة</button>
+
+  <div id="msg"></div>
+</div>
+
+<!-- JS -->
+<script type="module" src="ticket-new.js"></script>
+
+</body>
+</html>

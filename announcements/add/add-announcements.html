@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>إضافة إعلان</title>
+
+  <style>
+    body{
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(135deg,#0a3d62,#0f6ea8);
+      font-family: Arial, sans-serif;
+      color:#fff;
+    }
+    .card{
+      width:min(420px,92vw);
+      background:rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.18);
+      backdrop-filter: blur(10px);
+      padding:18px;
+      border-radius:16px;
+      box-shadow:0 10px 30px rgba(0,0,0,.25);
+    }
+    h2{margin:0 0 14px;text-align:center;}
+    input,textarea{
+      width:100%;
+      border:none;
+      outline:none;
+      padding:12px 12px;
+      border-radius:10px;
+      margin:8px 0;
+      font-size:15px;
+    }
+    textarea{min-height:120px;resize:vertical;}
+    button{
+      width:100%;
+      margin-top:10px;
+      padding:12px 14px;
+      border:none;
+      border-radius:12px;
+      cursor:pointer;
+      font-size:16px;
+      color:#fff;
+      background:linear-gradient(90deg,#00c6ff,#ff4d7d);
+    }
+    .msg{
+      margin-top:10px;
+      text-align:center;
+      font-size:14px;
+      opacity:.95;
+    }
+    .back{
+      display:inline-block;
+      margin-bottom:10px;
+      color:#cfefff;
+      text-decoration:none;
+      font-size:14px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <a class="back" href="../announcements.html">⬅️ رجوع للإعلانات</a>
+
+    <h2>📢 إضافة إعلان جديد</h2>
+
+    <input type="text" id="title" placeholder="عنوان الإعلان" />
+    <textarea id="content" placeholder="نص الإعلان"></textarea>
+
+    <button id="publishAnnouncement">📣 نشر الإعلان</button>
+    <p id="msg" class="msg"></p>
+  </div>
+
+  <script type="module" src="./add-announcement.js"></script>
+</body>
+</html>

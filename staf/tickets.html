@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>تذاكر الدعم</title>
+
+  <style>
+    body {
+      background: #0b1d2a;
+      color: #fff;
+      font-family: Arial;
+      padding: 20px;
+    }
+
+    .back {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      background: transparent;
+      color: #3fa9f5;
+      border: 1px solid #3fa9f5;
+      padding: 6px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .page {
+      display: flex;
+      justify-content: center;
+    }
+
+    .tickets {
+      width: 100%;
+      max-width: 700px;
+    }
+
+    .ticket {
+      background: #102a43;
+      border: 1px solid #3fa9f5;
+      border-radius: 10px;
+      padding: 14px;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+<button class="back" onclick="location.href='../index.html'">⬅️ رجوع</button>
+
+<h2 style="text-align:center">📋 تذاكر الدعم</h2>
+
+<div class="page">
+  <div id="ticketsContainer" class="tickets"></div>
+</div>
+
+<script type="module" src="./tickets.js"></script>
+
+</body>
+</html>

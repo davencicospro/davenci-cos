@@ -1,0 +1,21 @@
+body {
+  background: #0b1d2a;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+#ticket {
+  background: #102a43;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.reply {
+  background: #153b5c;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  border-left: 4px solid #3fa9f5;
+}

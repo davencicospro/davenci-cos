@@ -1,0 +1,264 @@
+/* ================= RESET ================= */
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* ================= BODY ================= */
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a3d62, #0f6ea8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+/* ================= GENERAL CARD ================= */
+.card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 24px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* ================= DASHBOARD ================= */
+.dashboard-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dash-btn {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+.dash-btn:hover {
+  transform: scale(1.03);
+  opacity: 0.95;
+}
+
+/* أزرار ملوّنة */
+.dash-btn.admin {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+.dash-btn.announce {
+  background: linear-gradient(135deg, #ff9800, #ffc107);
+  color: #000;
+}
+
+.dash-btn.support {
+  background: linear-gradient(135deg, #ff0050, #00f2ea);
+  box-shadow: 0 0 18px rgba(255, 0, 80, 0.6);
+}
+
+.dash-btn.staff {
+  background: linear-gradient(135deg, #00c853, #64dd17);
+}
+
+.dash-btn.tiktok-support {
+  background: linear-gradient(135deg, #25f4ee, #fe2c55);
+  box-shadow: 0 0 18px rgba(254, 44, 85, 0.6);
+}
+
+
+
+/* ================= LOGOUT ================= */
+.logout-btn {
+  margin-top: 16px;
+  padding: 10px;
+  font-size: 13px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.9);
+  color: #003;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 480px) {
+  .card,
+  .add-announce-container {
+    padding: 20px;
+  }
+}
+/* ================= DASHBOARD HEADER (LOGO + TITLE) ================= */
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.dashboard-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  object-fit: cover;
+  background: rgba(255,255,255,0.15);
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.subtitle {
+  margin: 2px 0 0;
+  font-size: 13px;
+  opacity: 0.85;
+}
+/* ================= صفحة إضافة إعلان ================= */
+
+.add-announce-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-title {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+/* الكارد */
+.add-announce-card {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  padding: 22px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* input + textarea */
+.add-announce-card input[type="text"],
+.add-announce-card textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+
+.add-announce-card textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* file */
+.file-label {
+  background: rgba(255,255,255,0.15);
+  padding: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+}
+
+.file-label input {
+  display: none;
+}
+
+/* زر النشر */
+.publish-btn {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 14px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(135deg, #25f4ee, #fe2c55);
+  color: white;
+  transition: 0.3s;
+}
+
+.publish-btn:hover {
+  transform: scale(1.04);
+  opacity: 0.9;
+}
+
+/* الرسائل */
+.msg {
+  text-align: center;
+  font-size: 14px;
+}
+.add-announce-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-announce-card {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column; /* 🔥 هذا هو السر */
+  gap: 14px;
+  background: rgba(255,255,255,0.12);
+  padding: 22px;
+  border-radius: 18px;
+}
+
+.add-announce-card input,
+.add-announce-card textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+}
+
+.file-label {
+  text-align: center;
+  background: rgba(255,255,255,0.15);
+  padding: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.file-label input {
+  display: none;
+}
+/* زر الإعلانات الرئيسي */
+.dash-btn.announcements {
+  background: linear-gradient(135deg, #25F4EE, #FE2C55);
+  color: #ffffff;
+  border: none;
+  border-radius: 14px;
+  padding: 14px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* تأثير عند المرور */
+.dash-btn.announcements:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}

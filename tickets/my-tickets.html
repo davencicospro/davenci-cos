@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>تذاكري</title>
+</head>
+
+<body>
+
+<h2>🎫 تذاكري</h2>
+<div id="tickets"></div>
+
+<script type="module">
+import { db, auth } from "./firebase.js";
+import { collection, query, where, getDocs } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore.js";
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-auth.js";
+
+const container = document.getElementById("tickets");
+
+onAuthStateChanged(auth, async (user) => {
+  if (!user) {
+    container.innerHTML = "❌ لازم تسجيل دخول";
+    return;
+  }
+
+  const q = query(
+    collection(db, "tickets"),
+    where("uid", "==", user.uid)
+  );
+
+  const snap = await getDocs(q);
+
+  if (snap.empty) {
+    container.innerHTML = "لا توجد تذاكر";
+    return;
+  }
+
+  snap.forEach(doc => {
+    const d = doc.data();
+    const div = document.createElement("div");
+    div.style.border = "1px solid #ccc";
+    div.style.margin = "10px";
+    div.style.padding = "10px";
+
+    div.innerHTML = `
+      <p><strong>المشكل:</strong> ${d.text}</p>
+      <p><strong>الحالة:</strong> ${d.status}</p>
+    `;
+    container.appendChild(div);
+  });
+});
+</script>
+
+</body>
+</html>

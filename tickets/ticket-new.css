@@ -1,0 +1,89 @@
+/* ===== إعدادات عامة ===== */
+body {
+  background: linear-gradient(135deg, #0b1d2a, #102a43);
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  direction: rtl;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+
+/* ===== الكارت ===== */
+.card {
+  width: 420px;
+  max-width: 95%;
+  background: #132f4c;
+  margin: 60px auto;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(63, 169, 245, 0.25);
+}
+
+/* ===== العنوان ===== */
+.card h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #3fa9f5;
+}
+
+/* ===== الحقول ===== */
+input,
+select,
+textarea {
+  width: 100%;
+  background: #0b1d2a;
+  border: 1px solid #3fa9f5;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 14px;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+textarea {
+  resize: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #b6d6f2;
+}
+
+/* ===== رفع صورة ===== */
+label {
+  font-size: 13px;
+  margin-bottom: 6px;
+  display: block;
+  color: #9fd3ff;
+}
+
+input[type="file"] {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+/* ===== الزر ===== */
+button {
+  width: 100%;
+  background: linear-gradient(135deg, #3fa9f5, #2b8ad6);
+  border: none;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 15px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.03);
+  background: linear-gradient(135deg, #5bb8ff, #3fa9f5);
+}
+
+/* ===== الرسائل ===== */
+#msg {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 14px;
+}
