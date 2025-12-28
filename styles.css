@@ -256,9 +256,97 @@ body {
   cursor: pointer;
   transition: 0.3s ease;
 }
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
 
-/* تأثير عند المرور */
-.dash-btn.announcements:hover {
-  opacity: 0.9;
-  transform: scale(1.03);
+/* Reset */
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* الخلفية */
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a3d62, #0f6ea8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+/* الكرت */
+.card {
+  width: 360px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  text-align: center;
+}
+
+/* العنوان */
+.card h1 {
+  margin-bottom: 25px;
+  font-size: 26px;
+}
+
+/* الفورم */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* حقول الإدخال */
+form input {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+/* زر الدخول */
+form button {
+  margin-top: 10px;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #25f4ee, #fe2c55);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+
+  transition: 0.3s ease;
+}
+
+form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* رسالة الدخول */
+.msg {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+/* رابط إنشاء حساب */
+a {
+  display: block;
+  margin-top: 18px;
+  color: #cceeff;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+a:hover {
+  text-decoration: underline;
 }

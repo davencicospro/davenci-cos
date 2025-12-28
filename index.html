@@ -1,19 +1,146 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>Davenci C.O.S</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body style="font-family: Arial; text-align:center; padding:40px">
-  <h1>Davenci C.O.S</h1>
-  <p>لوحة التحكم</p>
+<meta charset="UTF-8">
+<title>Davenci C.O.S</title>
 
-  <a href="dashboard.html"
-     style="display:inline-block;padding:12px 20px;
-     background:#0f6ea8;color:#fff;
-     text-decoration:none;border-radius:8px">
-     الدخول
-  </a>
+<style>
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #0a3d62, #0f6ea8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 360px;
+  padding: 25px;
+  border-radius: 22px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+  text-align: center;
+}
+
+.card h2 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.card input {
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 14px;
+  border: none;
+  border-radius: 14px;
+  outline: none;
+  font-size: 15px;
+}
+
+.card button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 16px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(135deg, #7f5cff, #3dd5f3);
+}
+
+.card button:hover {
+  opacity: 0.9;
+}
+
+.switch {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #e6f9ff;
+  cursor: pointer;
+}
+
+.brand {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #e6f9ff;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🔐 تسجيل الدخول -->
+<div class="card" id="loginBox">
+  <h2>تسجيل الدخول</h2>
+
+  <input type="email" id="loginEmail" placeholder="البريد الإلكتروني">
+  <input type="password" id="loginPass" placeholder="كلمة السر">
+
+  <button onclick="login()">دخول</button>
+
+  <div class="switch" onclick="showRegister()">إنشاء حساب جديد</div>
+  <div class="brand">Davenci C.O.S</div>
+</div>
+
+<!-- 📝 إنشاء حساب -->
+<div class="card" id="registerBox" style="display:none">
+  <h2>إنشاء حساب</h2>
+
+  <input type="text" id="regName" placeholder="الاسم الكامل">
+  <input type="email" id="regEmail" placeholder="البريد الإلكتروني">
+  <input type="password" id="regPass" placeholder="كلمة السر">
+
+  <button onclick="register()">تسجيل</button>
+
+  <div class="switch" onclick="showLogin()">العودة لتسجيل الدخول</div>
+  <div class="brand">Davenci C.O.S</div>
+</div>
+
+<script>
+function showRegister() {
+  document.getElementById("loginBox").style.display = "none";
+  document.getElementById("registerBox").style.display = "block";
+}
+
+function showLogin() {
+  document.getElementById("registerBox").style.display = "none";
+  document.getElementById("loginBox").style.display = "block";
+}
+
+function login() {
+  const email = loginEmail.value.trim();
+  const pass = loginPass.value.trim();
+
+  if (!email || !pass) {
+    alert("يرجى إدخال البريد وكلمة السر");
+    return;
+  }
+
+  // مؤقتًا نعدّيو
+  window.location.href = "dashboard.html";
+}
+
+function register() {
+  const name = regName.value.trim();
+  const email = regEmail.value.trim();
+  const pass = regPass.value.trim();
+
+  if (!name || !email || !pass) {
+    alert("يرجى تعمير جميع الحقول");
+    return;
+  }
+
+  alert("تم إنشاء الحساب بنجاح");
+  showLogin();
+}
+</script>
+
 </body>
 </html>
